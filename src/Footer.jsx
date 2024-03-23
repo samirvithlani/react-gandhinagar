@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer({copy}) {
 
     const footerStyle = {
         position: "fixed",
@@ -13,7 +13,8 @@ export default function Footer() {
 
   return (
     <div style={footerStyle}>
-      <h1>Footer </h1>
+      <h1>Footer  {copy}</h1>
+      
     </div>
   );
 }
