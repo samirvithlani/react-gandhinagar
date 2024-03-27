@@ -3,6 +3,7 @@ import "./App.css";
 import {Header} from './Header'
 import Footer from "./Footer";
 import { Content } from "./Content";
+import { UseStateDemo } from "./UseStateDemo";
 
 function App() {
   
@@ -16,7 +17,8 @@ function App() {
   return (
     <div className="App">
       <Header title = {title} copyright = {copyright}></Header>
-      <Content data = {users}></Content>
+      {/* <Content data = {users}></Content> */}
+      <UseStateDemo/>
       <Footer copy = {copyright}></Footer>
     </div>
   );
