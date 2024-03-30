@@ -4,6 +4,7 @@ import {Header} from './Header'
 import Footer from "./Footer";
 import { Content } from "./Content";
 import { UseStateDemo } from "./UseStateDemo";
+import { Users } from "./users/Users";
 
 function App() {
   
@@ -17,8 +18,9 @@ function App() {
   return (
     <div className="App">
       <Header title = {title} copyright = {copyright}></Header>
+      <Users/>
       {/* <Content data = {users}></Content> */}
-      <UseStateDemo/>
+      {/* <UseStateDemo/> */}
       <Footer copy = {copyright}></Footer>
     </div>
   );
