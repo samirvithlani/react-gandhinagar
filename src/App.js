@@ -5,6 +5,12 @@ import Footer from "./Footer";
 import { Content } from "./Content";
 import { UseStateDemo } from "./UseStateDemo";
 import { Users } from "./users/Users";
+import { Navbar } from "./Navbar";
+import { Route, Routes } from "react-router-dom";
+import { AboutUs } from "./employees/AboutUs";
+import { EmployeeDashboard } from "./employees/EmployeeDashboard";
+import { EmployeeHome } from "./employees/EmployeeHome";
+import { Erro404 } from "./Erro404";
 
 function App() {
   
@@ -17,11 +23,15 @@ function App() {
 
   return (
     <div className="App">
-      <Header title = {title} copyright = {copyright}></Header>
-      <Users/>
-      {/* <Content data = {users}></Content> */}
-      {/* <UseStateDemo/> */}
-      <Footer copy = {copyright}></Footer>
+      <Navbar/>
+      <Routes>
+        <Route path ="/aboutus" element ={<AboutUs/>}></Route>
+        <Route path ="/empdashboard" element = {<EmployeeDashboard/>}></Route>
+        <Route path ="/" element = {<EmployeeHome/>}></Route>
+        {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}
+        <Route path="*" element = {<Erro404/>}></Route>
+      </Routes>
+      
     </div>
   );
 }

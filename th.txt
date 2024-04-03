@@ -41,3 +41,13 @@ a -->b --#-->c -#-->d
 
 2)context
 3)redux
+
+npm i react-router-dom
+index.js
+<BrowserRouter><App></BrowserRouter>
+
+<Navbar>
+
+<Routes>
+    <Route path ="/aboutus " element={<AboutUs></Route>
+</Routes>
