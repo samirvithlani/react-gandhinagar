@@ -11,6 +11,10 @@ import { AboutUs } from "./employees/AboutUs";
 import { EmployeeDashboard } from "./employees/EmployeeDashboard";
 import { EmployeeHome } from "./employees/EmployeeHome";
 import { Erro404 } from "./Erro404";
+import { AboutCompany } from "./employees/AboutCompany";
+import { AboutCulture } from "./employees/AboutCulture";
+import { AboutCountry } from "./employees/AboutCountry";
+import { EmployeeDetail } from "./employees/EmployeeDetail";
 
 function App() {
   
@@ -27,6 +31,11 @@ function App() {
       <Routes>
         <Route path ="/aboutus" element ={<AboutUs/>}></Route>
         <Route path ="/empdashboard" element = {<EmployeeDashboard/>}></Route>
+        <Route path = "/aboutus/company" element = {<AboutCompany/>}></Route>
+        <Route path = "/aboutculture" element = {<AboutCulture/>}></Route>
+        <Route path  = "/aboutus/country" element = {<AboutCountry/>}></Route>
+        <Route path = "/empdashboard/detail/:id" element = {<EmployeeDetail/>}></Route>
+
         <Route path ="/" element = {<EmployeeHome/>}></Route>
         {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}
         <Route path="*" element = {<Erro404/>}></Route>

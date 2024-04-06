@@ -43,6 +43,7 @@ a -->b --#-->c -#-->d
 3)redux
 
 npm i react-router-dom
+
 index.js
 <BrowserRouter><App></BrowserRouter>
 
