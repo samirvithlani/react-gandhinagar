@@ -15,6 +15,10 @@ export const Navbar = () => {
       <li class="nav-item">
         <Link to ="/empdashboard" className='nav-link'>Employee Dashboard</Link>
       </li>
+      
+      <li class="nav-item">
+        <Link to ="/formdemo1" className='nav-link'>FORM DEMO 1</Link>
+      </li>
     </ul>
    
   </div>
