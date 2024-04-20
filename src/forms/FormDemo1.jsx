@@ -19,7 +19,7 @@ export const FormDemo1 = () => {
         <form onSubmit={handleSubmit(submitHandler)}>
             <div>
                 <label>Name</label>
-                <input type="text" {...register("userName")}></input>
+                <input type="text" {...register("name")}></input>
             </div>
             <div>
                 <label>AGE</label>

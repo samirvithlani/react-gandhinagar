@@ -52,3 +52,15 @@ index.js
 <Routes>
     <Route path ="/aboutus " element={<AboutUs></Route>
 </Routes>
+
+submitHandler =(data)
+handleSubmit (cb)=>{
+    {
+
+        name:"sachin",
+        age:23
+    }
+
+cb(obj)
+
+}
