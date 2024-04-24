@@ -10,7 +10,7 @@ export const FormDemo3 = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({defaultValues:{name:"delta",age:18}},{ mode: "all" },
+  } = useForm({mode:"onChange",defaultValues:{name:"delta",age:18}},
  );
 
   const submitHandler = (data) => {
