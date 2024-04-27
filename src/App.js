@@ -18,6 +18,8 @@ import { EmployeeDetail } from "./employees/EmployeeDetail";
 import { FormDemo1 } from "./forms/FormDemo1";
 import { FormDemo2 } from "./forms/FormDemo2";
 import { FormDemo3 } from "./forms/FormDemo3";
+import { ApiDemo1 } from "./api/ApiDemo1";
+import { UseEffecctDemo } from "./UseEffecctDemo";
 
 function App() {
   
@@ -41,6 +43,8 @@ function App() {
         <Route path = "/formdemo1" element = {<FormDemo1/>}></Route>
         <Route path = "formdemo2" element ={<FormDemo2/>}></Route>
         <Route path = "/formdemo3" element = {<FormDemo3/>}></Route>
+        <Route path = "/apidemo1" element = {<ApiDemo1/>}></Route>
+        <Route path  = "/useeffectdemo" element = {<UseEffecctDemo/>}></Route>
 
         <Route path ="/" element = {<EmployeeHome/>}></Route>
         {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}

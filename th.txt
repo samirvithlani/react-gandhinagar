@@ -64,3 +64,27 @@ handleSubmit (cb)=>{
 cb(obj)
 
 }
+
+API -->application programming interface
+
+API -->
+GET
+POSt
+PUT
+DELETE
+PATCH
+
+ajax --> fetch --->
+axios
+
+
+useEffect --> lifecycle method [hooks]
+
+
+to handle sideEffect  we can use useEffect
+
+
+whatsapp : ---> message --> send ---> replay -->
+
+
+

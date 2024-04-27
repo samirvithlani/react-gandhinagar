@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar {
+  flex: 0 0 200px; /* Sidebar width */
+  background-color: lightgray;
+}
+
+.content {
+  flex: 1; /* Content takes remaining space */
+  background-color: lightblue;
+}
