@@ -29,6 +29,9 @@ export const Navbar = () => {
       <li class="nav-item">
         <Link to ="/apidemo1" className='nav-link'>API Demo 1</Link>
       </li>
+      <li class="nav-item">
+        <Link to ="/apidemo2" className='nav-link'>API Demo 2</Link>
+      </li>
       
       <li class="nav-item">
         <Link to ="/useeffectdemo" className='nav-link'>USE EFFECt</Link>
