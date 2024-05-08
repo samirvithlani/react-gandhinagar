@@ -5,6 +5,7 @@ import { CustomeLoder } from "../CustomeLoder";
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
   const [isLoading, setisLoading] = useState(false)
+  const [isDelete, setisDelete] = useState(false)
 
   const getApiData = async () => {
     setisLoading(true)
@@ -21,6 +22,20 @@ export const ApiDemo1 = () => {
     getApiData();
     
   }, [])
+
+
+  const deleteUser = async (id) => {
+    setisDelete(true)
+    const res = await axios.delete("https://node5.onrender.com/user/user/"+id);
+    console.log("delete response", res);
+    if(res.status === 204){
+      setisDelete(false)
+      getApiData();
+    }
+
+  }
+
+
   
   return (
     <div>
@@ -28,6 +43,9 @@ export const ApiDemo1 = () => {
             isLoading && <CustomeLoder/>
         }
       <h1>API DEMO 1</h1>
+      {
+        isDelete && "Deleting..."
+      }
       {/* <button
         onClick={() => {
           getApiData();
@@ -42,6 +60,7 @@ export const ApiDemo1 = () => {
             <th>NAME</th>
             <th>EMAIL</th>
             <th>AGE</th>
+            <th>ACTION</th>
           </tr>
         </thead>
         <tbody>
@@ -52,6 +71,9 @@ export const ApiDemo1 = () => {
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.age}</td>
+                <td>
+                  <button onClick={()=>{deleteUser(user._id)}}className="btn btn-danger">DELETE</button>
+                </td>
               </tr>
             );
           })}
