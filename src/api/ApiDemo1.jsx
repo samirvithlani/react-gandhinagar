@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { CustomeLoder } from "../CustomeLoder";
 
 export const ApiDemo1 = () => {
@@ -73,6 +74,8 @@ export const ApiDemo1 = () => {
                 <td>{user.age}</td>
                 <td>
                   <button onClick={()=>{deleteUser(user._id)}}className="btn btn-danger">DELETE</button>
+                  <Link to ={`/userdetail/${user._id}`} className="btn btn-primary">DETAIL</Link>
+                  <Link to ={`/userupdate/${user._id}`} className="btn btn-info">update</Link>
                 </td>
               </tr>
             );
