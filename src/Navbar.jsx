@@ -43,6 +43,9 @@ export const Navbar = () => {
       <li class="nav-item">
         <Link to ="/useeffectdemo" className='nav-link'>USE EFFECt</Link>
       </li>
+      <li class="nav-item">
+        <Link to ="/login" className='nav-link'>LOGIN</Link>
+      </li>
     </ul>
    
   </div>

@@ -27,6 +27,8 @@ import { UserUpdate } from "./api/UserUpdate";
 import { ApiDemo4 } from "./api/ApiDemo4";
 import { ApiDemo5 } from "./api/ApiDemo5";
 import { ApiDemo6 } from "./api/ApiDemo6";
+import { UserLogin } from "./api/UserLogin";
+import ProtectedRoutes from "./hooks/ProtectedRoutes";
 
 function App() {
   
@@ -41,8 +43,12 @@ function App() {
     <div className="App">
       <Navbar/>
       <Routes>
-        <Route path ="/aboutus" element ={<AboutUs/>}></Route>
-        <Route path ="/empdashboard" element = {<EmployeeDashboard/>}></Route>
+
+        <Route element ={<ProtectedRoutes/>}>
+          <Route path ="/aboutus" element ={<AboutUs/>}></Route>
+          <Route path ="/empdashboard" element = {<EmployeeDashboard/>}></Route>
+        </Route>
+
         <Route path = "/aboutus/company" element = {<AboutCompany/>}></Route>
         <Route path = "/aboutculture" element = {<AboutCulture/>}></Route>
         <Route path  = "/aboutus/country" element = {<AboutCountry/>}></Route>
@@ -57,6 +63,7 @@ function App() {
         <Route path = "/userdetail/:id" element = {<UserDetail/>}></Route>
         <Route path = "/userupdate/:id" element = {<UserUpdate/>}></Route>
         <Route path  = "/useeffectdemo" element = {<UseEffecctDemo/>}></Route>
+        <Route path = "/login" element = {<UserLogin/>}></Route>
 
         <Route path ="/" element = {<EmployeeHome/>}></Route>
         {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}
