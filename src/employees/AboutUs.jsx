@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { ThemeContext } from '../context'
 
 export const AboutUs = () => {
+  const {mode} = useContext(ThemeContext)
+  console.log(mode)
   return (
     <div>
         <h1>ABOUT US</h1>

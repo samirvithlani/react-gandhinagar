@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CustomeLoder } from "../CustomeLoder";
+import { MyButton } from "../MyButton";
 
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
@@ -89,6 +90,7 @@ export const ApiDemo1 = () => {
                 <td>{user.email}</td>
                 <td>{user.age}</td>
                 <td>
+                  <MyButton></MyButton>
                   <button
                     onClick={() => {
                       deleteUser(user._id);

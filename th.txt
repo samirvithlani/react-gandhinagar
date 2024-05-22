@@ -35,11 +35,9 @@ a -->b -->c*
 props drilling
 a -->b --#-->c -#-->d
 
-
-
-
-
 2)context
+    parent component --> child component --> grand child component
+
 3)redux
 
 npm i react-router-dom

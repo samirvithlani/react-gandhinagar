@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import {Header} from './Header'
+import { Header } from "./Header";
 import Footer from "./Footer";
 import { Content } from "./Content";
 import { UseStateDemo } from "./UseStateDemo";
@@ -29,47 +29,53 @@ import { ApiDemo5 } from "./api/ApiDemo5";
 import { ApiDemo6 } from "./api/ApiDemo6";
 import { UserLogin } from "./api/UserLogin";
 import ProtectedRoutes from "./hooks/ProtectedRoutes";
+import { ThemeContext } from "./context";
 
 function App() {
-  
-  var title = "React JS";  
+  var title = "React JS";
   var users = {
-    id:102,
-    name:"Amit"
-  }
-  var copyright = "© 2021"
+    id: 102,
+    name: "Amit",
+  };
+  var copyright = "© 2021";
 
   return (
     <div className="App">
-      <Navbar/>
-      <Routes>
+      <ThemeContext.Provider value={{ mode: "light" }}>
+        <Navbar />
+      </ThemeContext.Provider>
 
-        <Route element ={<ProtectedRoutes/>}>
-          <Route path ="/aboutus" element ={<AboutUs/>}></Route>
-          <Route path ="/empdashboard" element = {<EmployeeDashboard/>}></Route>
-        </Route>
+      <ThemeContext.Provider value={{ mode: "dark" }}>
+        <Routes>
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/aboutus" element={<AboutUs />}></Route>
+            <Route path="/empdashboard" element={<EmployeeDashboard />}></Route>
+          </Route>
 
-        <Route path = "/aboutus/company" element = {<AboutCompany/>}></Route>
-        <Route path = "/aboutculture" element = {<AboutCulture/>}></Route>
-        <Route path  = "/aboutus/country" element = {<AboutCountry/>}></Route>
-        <Route path = "/empdashboard/detail/:id" element = {<EmployeeDetail/>}></Route>
-        <Route path = "/formdemo1" element = {<FormDemo1/>}></Route>
-        <Route path = "formdemo2" element ={<FormDemo2/>}></Route>
-        <Route path = "/formdemo3" element = {<FormDemo3/>}></Route>
-        <Route path = "/apidemo1" element = {<ApiDemo1/>}></Route>
-        <Route path = "/apidemo2" element = {<ApiDemo2/>}></Route>
-        <Route path = "/apidemo3" element = {<ApiDemo3/>}></Route>
-        <Route path = "/apidemo4" element = {<ApiDemo6/>}></Route>
-        <Route path = "/userdetail/:id" element = {<UserDetail/>}></Route>
-        <Route path = "/userupdate/:id" element = {<UserUpdate/>}></Route>
-        <Route path  = "/useeffectdemo" element = {<UseEffecctDemo/>}></Route>
-        <Route path = "/login" element = {<UserLogin/>}></Route>
+          <Route path="/aboutus/company" element={<AboutCompany />}></Route>
+          <Route path="/aboutculture" element={<AboutCulture />}></Route>
+          <Route path="/aboutus/country" element={<AboutCountry />}></Route>
+          <Route
+            path="/empdashboard/detail/:id"
+            element={<EmployeeDetail />}
+          ></Route>
+          <Route path="/formdemo1" element={<FormDemo1 />}></Route>
+          <Route path="formdemo2" element={<FormDemo2 />}></Route>
+          <Route path="/formdemo3" element={<FormDemo3 />}></Route>
+          <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+          <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+          <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
+          <Route path="/apidemo4" element={<ApiDemo6 />}></Route>
+          <Route path="/userdetail/:id" element={<UserDetail />}></Route>
+          <Route path="/userupdate/:id" element={<UserUpdate />}></Route>
+          <Route path="/useeffectdemo" element={<UseEffecctDemo />}></Route>
+          <Route path="/login" element={<UserLogin />}></Route>
 
-        <Route path ="/" element = {<EmployeeHome/>}></Route>
-        {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}
-        <Route path="*" element = {<Erro404/>}></Route>
-      </Routes>
-      
+          <Route path="/" element={<EmployeeHome />}></Route>
+          {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}
+          <Route path="*" element={<Erro404 />}></Route>
+        </Routes>
+      </ThemeContext.Provider>
     </div>
   );
 }
