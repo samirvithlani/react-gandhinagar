@@ -83,6 +83,21 @@ to handle sideEffect  we can use useEffect
 
 
 whatsapp : ---> message --> send ---> replay -->
+-----------------------------------------------
+
+
+<select>
+    <option>INDIA</option>
+    <option>UK</option>
+</select>
+
+:india --> it should display all cities of india only
+:UK --> it should display all cities of UK only
+:onChange, useStare,json array
+<select>
+    
+</select>
+
 
 
 
