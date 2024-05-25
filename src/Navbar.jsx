@@ -26,7 +26,7 @@ export const Navbar = () => {
             </Link>
           </li>
 
-          <li class="nav-item">
+          {/* <li class="nav-item">
             <Link to="/formdemo1" className="nav-link">
               FORM DEMO 1
             </Link>
@@ -68,12 +68,18 @@ export const Navbar = () => {
             <Link to="/useeffectdemo" className="nav-link">
               USE EFFECt
             </Link>
+          </li> */}
+          <li class="nav-item">
+            <Link to="/prodcomp" className="nav-link">
+              products
+            </Link>
           </li>
           <li class="nav-item">
             <Link to="/login" className="nav-link">
               LOGIN
             </Link>
           </li>
+          
         </ul>
       </div>
     </nav>

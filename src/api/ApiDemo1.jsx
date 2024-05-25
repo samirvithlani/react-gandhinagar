@@ -90,7 +90,9 @@ export const ApiDemo1 = () => {
                 <td>{user.email}</td>
                 <td>{user.age}</td>
                 <td>
-                  <MyButton></MyButton>
+                  <MyButton name="delete" className= "btn btn-danger" onClick={()=>{
+                    deleteUser(user._id)
+                  }}></MyButton>
                   <button
                     onClick={() => {
                       deleteUser(user._id);

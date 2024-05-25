@@ -30,6 +30,7 @@ import { ApiDemo6 } from "./api/ApiDemo6";
 import { UserLogin } from "./api/UserLogin";
 import ProtectedRoutes from "./hooks/ProtectedRoutes";
 import { ThemeContext } from "./context";
+import { ProductComp } from "./reduxdemo/ProductComp";
 
 function App() {
   var title = "React JS";
@@ -70,6 +71,7 @@ function App() {
           <Route path="/userupdate/:id" element={<UserUpdate />}></Route>
           <Route path="/useeffectdemo" element={<UseEffecctDemo />}></Route>
           <Route path="/login" element={<UserLogin />}></Route>
+          <Route path = "/prodcomp" element = {<ProductComp/>}></Route>
 
           <Route path="/" element={<EmployeeHome />}></Route>
           {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}
