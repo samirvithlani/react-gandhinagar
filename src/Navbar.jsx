@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "./context";
+import { useSelector } from "react-redux";
 
 export const Navbar = () => {
+  const { mode } = useContext(ThemeContext);
+  console.log(mode);
 
-  const {mode} = useContext(ThemeContext)
-  console.log(mode)
+  const cartState = useSelector((state)=>state)
+  console.log("cartState",cartState.cart.cart.length)
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-info">
       <Link class="navbar-brand" to="/">
@@ -73,13 +76,15 @@ export const Navbar = () => {
             <Link to="/prodcomp" className="nav-link">
               products
             </Link>
+            {
+              cartState.cart.cart?.length
+            }
           </li>
           <li class="nav-item">
             <Link to="/login" className="nav-link">
               LOGIN
             </Link>
           </li>
-          
         </ul>
       </div>
     </nav>

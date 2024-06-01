@@ -12,6 +12,8 @@ const cartSlice = createSlice({
         addToCart: (state, action) => {
             console.log("state", state)
             console.log("action", action)
+            //actino : payload
+            //type: "cart/addToCart"
             state.cart = [...state.cart,action.payload]
         }
     }
