@@ -7,6 +7,11 @@ export const Navbar = () => {
   const { mode } = useContext(ThemeContext);
   console.log(mode);
 
+
+  const bankState = useSelector((state)=>state)
+  console.log("state....",bankState)
+
+
   const cartState = useSelector((state)=>state)
   console.log("cartState",cartState.cart.cart.length)
   return (
@@ -78,6 +83,15 @@ export const Navbar = () => {
             </Link>
             {
               cartState.cart.cart?.length
+            }
+          </li>
+          <li class="nav-item">
+            <Link to="/bank" className="nav-link">
+              bank comp
+            </Link>
+            Amount =
+            {
+              bankState.bank.amount
             }
           </li>
           <li class="nav-item">

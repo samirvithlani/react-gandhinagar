@@ -31,6 +31,7 @@ import { UserLogin } from "./api/UserLogin";
 import ProtectedRoutes from "./hooks/ProtectedRoutes";
 import { ThemeContext } from "./context";
 import { ProductComp } from "./reduxdemo/ProductComp";
+import { BankComponent } from "./reduxdemo/BankComponent";
 
 function App() {
   var title = "React JS";
@@ -72,6 +73,7 @@ function App() {
           <Route path="/useeffectdemo" element={<UseEffecctDemo />}></Route>
           <Route path="/login" element={<UserLogin />}></Route>
           <Route path = "/prodcomp" element = {<ProductComp/>}></Route>
+          <Route path = "/bank" element = {<BankComponent/>}></Route>
 
           <Route path="/" element={<EmployeeHome />}></Route>
           {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}
