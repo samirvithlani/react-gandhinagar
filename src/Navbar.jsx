@@ -7,13 +7,12 @@ export const Navbar = () => {
   const { mode } = useContext(ThemeContext);
   console.log(mode);
 
+  const bankState = useSelector((state) => state);
+  console.log("state....", bankState);
 
-  const bankState = useSelector((state)=>state)
-  console.log("state....",bankState)
+  const cartState = useSelector((state) => state);
+  console.log("cartState", cartState.cart.cart.length);
 
-
-  const cartState = useSelector((state)=>state)
-  console.log("cartState",cartState.cart.cart.length)
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-info">
       <Link class="navbar-brand" to="/">
@@ -81,19 +80,27 @@ export const Navbar = () => {
             <Link to="/prodcomp" className="nav-link">
               products
             </Link>
-            {
-              cartState.cart.cart?.length
-            }
+            {cartState.cart.cart?.length}
           </li>
           <li class="nav-item">
             <Link to="/bank" className="nav-link">
               bank comp
             </Link>
-            Amount =
-            {
-              bankState.bank.amount
-            }
+            Amount ={bankState.bank.amount}
           </li>
+
+          <li class="nav-item">
+            <Link to="/buttondemo" className="nav-link">
+              buttondemo
+            </Link>
+          </li>
+
+          <li class="nav-item">
+            <Link to="/layouts" className="nav-link">
+              layouts
+            </Link>
+          </li>
+
           <li class="nav-item">
             <Link to="/login" className="nav-link">
               LOGIN

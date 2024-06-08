@@ -100,4 +100,14 @@ whatsapp : ---> message --> send ---> replay -->
 
 
 
+redux task :
+
+navbar --> switch -->
+
+application mode --> light mode:
+
+
+
+
+
 
