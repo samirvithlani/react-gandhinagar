@@ -34,6 +34,7 @@ import { ProductComp } from "./reduxdemo/ProductComp";
 import { BankComponent } from "./reduxdemo/BankComponent";
 import { ButtonDemo } from "./mui/ButtonDemo";
 import { LayoutDemo } from "./mui/LayoutDemo";
+import { ContentComp } from "./ContentComp";
 
 function App() {
   var title = "React JS";
@@ -78,6 +79,7 @@ function App() {
           <Route path = "/bank" element = {<BankComponent/>}></Route>
           <Route path = "/buttondemo" element = {<ButtonDemo/>}></Route>
           <Route path = "/layouts" element = {<LayoutDemo/>}></Route>
+          <Route path = "/content" element = {<ContentComp/>}></Route>
 
           <Route path="/" element={<EmployeeHome />}></Route>
           {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}
