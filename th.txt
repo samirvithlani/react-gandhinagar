@@ -106,6 +106,9 @@ navbar --> switch -->
 
 application mode --> light mode:
 
+slider task:
+10 --> records
+employee --> name, age, salary, city.....
 
 
 

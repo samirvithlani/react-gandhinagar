@@ -107,6 +107,12 @@ export const Navbar = () => {
             content
             </Link>
           </li>
+          
+          <li class="nav-item">
+            <Link to="/table" className="nav-link">
+            table
+            </Link>
+          </li>
 
           <li class="nav-item">
             <Link to="/login" className="nav-link">

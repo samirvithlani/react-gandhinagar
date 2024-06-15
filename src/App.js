@@ -35,6 +35,8 @@ import { BankComponent } from "./reduxdemo/BankComponent";
 import { ButtonDemo } from "./mui/ButtonDemo";
 import { LayoutDemo } from "./mui/LayoutDemo";
 import { ContentComp } from "./ContentComp";
+import { MuiDatGrid } from "./mui/MuiDatGrid";
+import { MuiDataGrid2 } from "./mui/MuiDataGrid2";
 
 function App() {
   var title = "React JS";
@@ -80,6 +82,7 @@ function App() {
           <Route path = "/buttondemo" element = {<ButtonDemo/>}></Route>
           <Route path = "/layouts" element = {<LayoutDemo/>}></Route>
           <Route path = "/content" element = {<ContentComp/>}></Route>
+          <Route path ="/table" element  ={<MuiDataGrid2/>}></Route>
 
           <Route path="/" element={<EmployeeHome />}></Route>
           {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}
