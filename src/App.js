@@ -37,6 +37,7 @@ import { LayoutDemo } from "./mui/LayoutDemo";
 import { ContentComp } from "./ContentComp";
 import { MuiDatGrid } from "./mui/MuiDatGrid";
 import { MuiDataGrid2 } from "./mui/MuiDataGrid2";
+import { UploadFile } from "./nodeapi/UploadFile";
 
 function App() {
   var title = "React JS";
@@ -83,6 +84,7 @@ function App() {
           <Route path = "/layouts" element = {<LayoutDemo/>}></Route>
           <Route path = "/content" element = {<ContentComp/>}></Route>
           <Route path ="/table" element  ={<MuiDataGrid2/>}></Route>
+          <Route path = "/uploadfile" element = {<UploadFile/>}> </Route>
 
           <Route path="/" element={<EmployeeHome />}></Route>
           {/* <Route path ="*" element = {<h1>404 pAGE NOT FOUND...</h1>}></Route> */}

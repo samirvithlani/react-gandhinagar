@@ -113,6 +113,12 @@ export const Navbar = () => {
             table
             </Link>
           </li>
+                    
+          <li class="nav-item">
+            <Link to="/uploadfile" className="nav-link">
+            upload file
+            </Link>
+          </li>
 
           <li class="nav-item">
             <Link to="/login" className="nav-link">
